@@ -2,12 +2,12 @@
   <v-footer absolute dark padless>
     <v-card class="flex" flat tile>
       <v-card-title class="blue">
-        <strong class="d-flex flex-row small">
-          <p class="px-6">About us</p>
-          <p class="px-6">Privacy Policy</p>
-          <p class="px-6">Terms of Use</p>
-          <p class="px-6">Contact Us</p>
-        </strong>
+        <div class="d-flex flex-row small">
+          <p class="text-md px-6">About us</p>
+          <p class="text-md px-6">Privacy Policy</p>
+          <p class="text-md px-6">Terms of Use</p>
+          <p class="text-md px-6">Contact Us</p>
+        </div>
 
         <v-spacer></v-spacer>
 

@@ -1,7 +1,10 @@
 <template>
   <v-app>
     <CommonNavbar />
-    <Nuxt />
+    <div class="mt-6"></div>
+    <v-main>
+      <Nuxt />
+    </v-main>
     <CommonFooter />
   </v-app>
 </template>

@@ -1,11 +1,11 @@
-<template>
+<!-- <template>
   <div>
     <div class="flex justify-center items-start gap-3 mt-16 text-lg textblue">
       Setup your company’s inventory management/ buying system in 3 steps
     </div>
     <div class="d-flex justify-center">
       <div class="mt-12 justify-center text-center">
-        <v-btn class="circle-btn mx-2 mb-2" color="primary" fab>
+        <v-btn class="circle-btn mx-2" color="primary" fab>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="1em"
@@ -26,14 +26,14 @@
 
       <div
         :class="
-          increment > 1
+          incerment > 1
             ? ' w-40 h-1.5 rounded-lg bgblue mt-16'
             : 'w-40 h-1.5 rounded-lg bggray mt-16'
         "
       ></div>
 
-      <div class="mt-12 mx-3 justify-center text-center">
-        <v-btn class="circle-btn mx-2 mb-2" :color="getcolorbutton1" fab>
+      <div class="mt-12 justify-center text-center">
+        <v-btn class="circle-btn mx-2 mb-2" :color="getcolorbutton1()" fab>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="1em"
@@ -53,14 +53,14 @@
 
       <div
         :class="
-          increment > 2
+          incerment > 2
             ? 'w-40 h-1.5 rounded-lg bgblue mt-16'
             : 'w-40 h-1.5 rounded-lg bggray mt-16'
         "
       ></div>
 
       <div class="mt-12 justify-center text-center">
-        <v-btn class="circle-btn mx-2 mb-2" :color="getcolorbutton2" fab>
+        <v-btn class="circle-btn mx-2 mb-2" :color="getcolorbutton2()" fab>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="1em"
@@ -81,51 +81,47 @@
         <div>Submit for Approval</div>
       </div>
     </div>
-    <div v-if="increment == 1" class="mt-16 pt-6 mb-16">
-      <FirstPage />
-    </div>
-    <div v-if="increment == 2">
-      <AddUser />
-    </div>
-    <!-- <DialogBoxVue /> -->
-    <div v-if="increment == 3" class="mt-16">
-      <DataTableVue />
-    </div>
   </div>
 </template>
 
 <script>
 import { mapState } from "vuex";
 
-import FirstPage from "../components/Form/FirstPage.vue";
-import AddUser from "../components/Form/AddUser.vue";
-// import DialogBoxVue from "../components/Form/DialogBox.vue";
-import DataTableVue from "../components/Form/DataTable.vue";
-// import Test from "../components/Form/Test.vue";
 export default {
-  name: "IndexPage",
-  components: { FirstPage, AddUser, DataTableVue },
-  methods: {},
+  name: "HeroiconsBuildingOffice16Solid",
 
-  computed: {
+  data() {
+    return {
+      // incerment: 3,
+    };
+  },
+
+  methods: {
     getcolorbutton1() {
-      if (this.increment > 1) {
+      if (this.incerment > 1) {
         return "primary";
       } else {
         return "secondary";
       }
     },
     getcolorbutton2() {
-      if (this.increment > 2) {
+      if (this.incerment > 2) {
         return "primary";
       } else {
         return "secondary";
       }
     },
+
+    getall() {
+      console.log(this.increment);
+    },
+  },
+
+  computed: {
     ...mapState(["increment"]),
   },
-  created() {
-    console.log(this.increment, "incrementincrementincrement");
+  mounted() {
+    this.getall();
   },
 };
 </script>
@@ -156,4 +152,4 @@ svg {
 .textblue {
   color: #1976d2;
 }
-</style>
+</style> -->
